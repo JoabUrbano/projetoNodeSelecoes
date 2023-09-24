@@ -1,10 +1,13 @@
 import mysql from "mysql"
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const CONEXAO = mysql.createConnection({
     host: "localhost",
     port: "3306",
     user: "root",
-    password: "@%20Pato23%@",
+    password: process.env.SENHA_BD,
     database: "bd_copa"
 });
 
